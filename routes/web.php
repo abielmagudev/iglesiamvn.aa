@@ -24,9 +24,14 @@ use App\Http\Controllers\VersionController;
 
 // Autenticado
 Route::middleware(['web', 'auth'])->group(function () {
+	
+	Route::get('/', fn() => redirect()->route('escritorio.index'));
 	Route::get('escritorio', EscritorioController::class)->name('escritorio.index');
+	
 	Route::resource('canciones', CancionController::class)->parameters(['canciones' => 'cancion']);
+	
 	Route::resource('cantantes', CantanteController::class);
+	
 	Route::resource('usuarios', UsuarioController::class);
 
 	Route::prefix('interpretes')->group(function () {
