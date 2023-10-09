@@ -4,8 +4,8 @@
       <div class="navbar-item">
         <img src="{{ asset('images/mvn-favicon-b.png') }}" width="28" height="28" class="mr-2">
       </div>
- 
-      <div class="is-relative" style="margin-top:1px;margin-left:55.5vw">  
+
+      <div class="is-hidden-desktop" style="position:absolute;top:0;right:10%;">  
         <x-modal-trigger modal-id="modalBuscarCanciones" class="button is-white p-5">
           <span class="icon">
             <i class="fa-solid fa-magnifying-glass"></i>
