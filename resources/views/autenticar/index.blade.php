@@ -11,7 +11,7 @@
                 </div>
                 @endif
 
-                <div class="box has-text-centered mx-5" style="width:100vw;max-width:400px;">
+                <div class="box has-text-centered" style="width:90vw;max-width:400px;">
                     <div class="title">
                         <img src="{{ asset('images/mvn-favicon-b.png') }}" width="92" height="92" />
                     </div>
