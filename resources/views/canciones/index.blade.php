@@ -2,7 +2,7 @@
 @section('content')
 <x-card title="Canciones">
 	<x-slot name="options">
-		<a href="{{ route('canciones.create') }}" class="button is-link is-inverted">Nueva canción</a>
+		<a href="{{ route('canciones.create') }}" class="button is-link is-inverted px-2">Nueva canción</a>
 
 		<x-dropmenu class="is-right">
 			<x-slot name="icon">

@@ -2,7 +2,7 @@
 @section('content')
 <x-card title="Editar usuario">
     <form action="{{ route('usuarios.update', $usuario) }}" method="post" autocomplete="off">
-        @include('usuarios._form')
+        @include('usuarios._form-edit')
         @method('put')
         <br>
         <div class="field is-grouped is-grouped-right">

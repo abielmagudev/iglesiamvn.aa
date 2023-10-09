@@ -2,7 +2,7 @@
 @section('content')
 <x-card title="Nuevo usuario">
     <form action="{{ route('usuarios.store') }}" method="post" autocomplete="off">
-        @include('usuarios._form')
+        @include('usuarios._form-create')
         <br>
         <div class="field is-grouped is-grouped-right">
             <div class="control">

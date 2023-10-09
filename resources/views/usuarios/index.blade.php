@@ -10,7 +10,7 @@
         @slot('thead')
         <tr>
             <th>Usuario</th>
-            <th>Correo electrónico</th>
+            <th class="has-text-nowrap">Correo electrónico</th>
             <th></th>
         </tr>
         @endslot
