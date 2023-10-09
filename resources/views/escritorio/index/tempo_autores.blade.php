@@ -38,7 +38,7 @@
 		<x-card title="Autores" class="height-100">
 			@if( $canciones->count() )
 			<div style="max-height:350px; overflow-y: scroll;">
-				<x-table>
+				<x-table class="is-hoverable">
 
 					<x-slot name="thead">
 					<tr>

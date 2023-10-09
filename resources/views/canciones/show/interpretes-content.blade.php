@@ -7,6 +7,7 @@
 
 		@if( $cancion->interpretes->count() )
 		<x-table>
+
 			<x-slot name="thead">
 			<tr class="has-vertical-middle">
 				<th>Nombre</th>
@@ -18,12 +19,12 @@
 
 			@foreach($cancion->interpretes as $cantante)
 			<tr class="has-vertical-middle">
-				<td>{{ $cantante->nombre }}</td>
-				<td>
+				<td class="has-text-nowrap">{{ $cantante->nombre }}</td>
+				<td class="has-text-nowrap">
 					<span>{{ $cantante->pivot->descripcion_tonalidad }}</span>
 					<span>( {{ $cantante->pivot->tonalidad }} )</span>
 				</td>
-				<td>{{ $cantante->pivot->notas }}</td>
+				<td class="has-text-nowrap">{{ $cantante->pivot->notas }}</td>
 				<td class="has-text-right">
 					<a href="{{ route('interpretes.edit', [$cancion, $cantante]) }}" class="button is-warning is-outlined has-text-dark">
 						<span class="icon has-text-dark">

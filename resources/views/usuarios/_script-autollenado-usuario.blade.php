@@ -1,6 +1,6 @@
 @push('scripts')
 <script>
-const rellenarUsuario = {
+const autollenarUsuario = {
     inputEmail: document.getElementById('inputCorreoElectronico'),
     inputName: document.getElementById('inputUsuario'),
     listen: function () {
@@ -14,6 +14,6 @@ const rellenarUsuario = {
         })
     }
 }
-rellenarUsuario.listen()
+autollenarUsuario.listen()
 </script>    
 @endpush

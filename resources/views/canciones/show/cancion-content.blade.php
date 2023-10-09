@@ -10,6 +10,7 @@
 						<span class="icon">
 							<i class="fa-solid fa-copy"></i>
 						</span>
+						<span>Copiar</span>
 					</button>
 				</x-slot>
 
@@ -29,6 +30,7 @@
 						<span class="icon">
 							<i class="fa-solid fa-pen-to-square"></i>
 						</span>
+						<span>Editar</span>
 					</a>
 				</x-slot>
 

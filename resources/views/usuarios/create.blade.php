@@ -14,5 +14,5 @@
         </div>
     </form>
 </x-card>
-@include('usuarios._script-rellenar-usuario')
+@include('usuarios._script-autollenado-usuario')
 @endsection

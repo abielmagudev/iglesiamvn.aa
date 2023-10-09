@@ -60,11 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const $target = document.getElementById(modal);
 
     $trigger.addEventListener('click', (e) => {
-
-      if(e.target.tagName == 'A')
-      {
         e.preventDefault()
-      }
 
       openModal($target);
     });

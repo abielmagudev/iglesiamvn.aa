@@ -32,8 +32,8 @@
                 height: 100% !important;
             }
             .has-background-purple-bold {
-                background: rgb(113,0,180);
-                background: linear-gradient(336deg, rgba(113,0,180,1) 0%, rgba(57,9,121,1) 100%);
+                background: rgb(68,25,85);
+                background: linear-gradient(135deg, rgba(68,25,85,1) 13%, rgba(142,43,161,1) 86%);
             }
         </style>
     </head>
@@ -43,9 +43,9 @@
         @include('app.navbar')
 
         <section class="section">
+            @include('app.notificator')
+            
             <div class="container">
-
-                @include('app.notificator')
 
                 @yield('content')
                 

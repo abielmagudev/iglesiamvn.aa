@@ -18,7 +18,6 @@ $all_notifications = [
 <x-notification :color="$notification">
 	{!! session($notification) !!}
 </x-notification>
-<br>
 @endif
 
 @endforeach

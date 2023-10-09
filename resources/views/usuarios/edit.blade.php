@@ -15,7 +15,7 @@
         </div>
     </form>
 </x-card>
-@include('usuarios._script-rellenar-usuario')
+@include('usuarios._script-autollenado-usuario')
 <br>
 
 <div class="field is-grouped is-justify-content-flex-end">
@@ -31,8 +31,14 @@
         <form action="{{ route('usuarios.destroy', $usuario) }}" method="post">
             @csrf
             @method('delete')
-            <button class="button is-danger is-outlined" type="submit">Si, eliminar usuario</button>
-            <button class="button is-dark button-modal-close" type="button">Cancelar</button>
+            <div class="field is-grouped is-grouped-centered">
+                <div class="control"> 
+                    <button class="button is-danger is-outlined" type="submit">Si, eliminar usuario</button>
+                </div>
+                <div class="control">
+                    <button class="button is-dark button-modal-close" type="button">Cancelar</button>
+                </div>
+            </div>
         </form>
     </div>
 </x-modal>

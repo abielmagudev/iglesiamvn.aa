@@ -21,9 +21,8 @@
 	<x-table class="is-hoverable">
 		<x-slot name="thead">
 			<tr>
-				<th>Título</th>
-				<th>Autor</th>
-				<th>Letra <span class="has-text-grey-light">(Extracto)</span></th>
+				<th class="has-text-nowrap">Título <span class="has-text-grey-light">(Autor)</span></th>
+				<th class="has-text-nowrap">Letra <span class="has-text-grey-light">(Extracto)</span></th>
 				<th class="has-text-nowrap">Indicador de tempo</th>
 				<th>Estatus</th>
 				<th></th>
@@ -32,9 +31,11 @@
 
 		@foreach($canciones as $cancion)
 		<tr class="has-vertical-middle">
-			<td class="has-text-nowrap">{{ $cancion->titulo }}</td>
-			<td class="has-text-nowrap">{{ $cancion->autor }}</td>
-			<td style="min-width:256px;">
+			<td class="has-text-nowrap">
+				<a href="{{ route('canciones.show', $cancion) }}" class="">{{ $cancion->titulo }}</span></a>
+				<span class="has-text-grey">({{ $cancion->autor }})</span>
+			</td>
+			<td class="has-text-nowrap">
 				@if( empty($request->get('letra')) )
 				<p>"{{ $cancion->extracto_letra  }}..."</p>
 				

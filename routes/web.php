@@ -21,7 +21,6 @@ use App\Http\Controllers\VersionController;
 |
 */
 
-
 // Autenticado
 Route::middleware(['web', 'auth'])->group(function () {
 	

@@ -9,16 +9,16 @@
     <x-table class="is-fullwidth is-hoverable">
         @slot('thead')
         <tr>
-            <th>Correo electrónico</th>
             <th>Usuario</th>
+            <th>Correo electrónico</th>
             <th></th>
         </tr>
         @endslot
 
         @foreach($usuarios as $usuario)
         <tr class="has-vertical-middle">
-            <td>{{ $usuario->email }}</td>
             <td>{{ $usuario->name }}</td>
+            <td>{{ $usuario->email }}</td>
             <td class="has-text-right">
                 <a href="{{ route('usuarios.edit', $usuario) }}" class="button is-warning is-outlined has-text-dark">
                     <span class="icon has-text-dark">

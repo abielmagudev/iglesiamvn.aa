@@ -30,8 +30,14 @@
 		<form action="{{ route('cantantes.destroy', $cantante) }}" method="post">
 			@csrf
 			@method('delete')
-			<button class="button is-danger is-outlined" type="submit">Si, eliminar cantante</button>
-			<button class="button is-dark button-modal-close" type="button">Cancelar</button>
+			<div class="field is-grouped is-grouped-centered">
+				<div class="control">
+					<button class="button is-danger is-outlined" type="submit">Si, eliminar cantante</button>
+				</div>
+				<div class="control">
+					<button class="button is-dark button-modal-close" type="button">Cancelar</button>
+				</div>
+			</div>
 		</form>
 	</div>
 </x-modal>
