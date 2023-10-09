@@ -5,7 +5,7 @@
         <img src="{{ asset('images/mvn-favicon-b.png') }}" width="28" height="28" class="mr-2">
       </div>
  
-      <div class="is-relative" style="margin-top:1px;margin-left:70%">  
+      <div class="is-relative" style="margin-top:1px;margin-left:70vw">  
         <x-modal-trigger modal-id="modalBuscarCanciones" class="button is-white p-5">
           <span class="icon">
             <i class="fa-solid fa-magnifying-glass"></i>
