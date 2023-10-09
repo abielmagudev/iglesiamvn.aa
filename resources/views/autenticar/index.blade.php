@@ -4,6 +4,7 @@
     <div class="hero is-fullheight">
         <div class="hero-body is-justify-content-center">
 
+            <div id="wrapper">         
                 @if( $errors->any() )
                 <div class="notification is-danger has-text-centered">
                     <strong>Usuario ó contraseña incorrectos</strong>
@@ -32,6 +33,7 @@
                         @csrf
                     </form>
                 </div>
+            </div>
 
         </div>
     </div>   
