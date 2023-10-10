@@ -21,12 +21,6 @@
       </datalist>
       @endif
     </div>
-
-    <div class="field">
-      <label class="label" for="inputUrlReferencia">URL de referencia</label>
-      <x-form.input id="inputUrlReferencia" type="url" name="url_referencia" :value="old('url_referencia', $cancion->url_referencia)" placeholder="(Opcional) YouTube, Spotify..."/>
-      <x-error name="url_referencia" />
-    </div>
     
     <div class="field">
       <label class="label">Indicador de tempo</label>
@@ -37,6 +31,12 @@
           @endforeach
       </x-form.select>
       <x-error name="indicador_tempo" />
+    </div>
+
+    <div class="field">
+      <label class="label" for="inputUrlReferencia">URL de referencia</label>
+      <x-form.input id="inputUrlReferencia" type="url" name="url_referencia" :value="old('url_referencia', $cancion->url_referencia)" placeholder="(Opcional) YouTube, Spotify..."/>
+      <x-error name="url_referencia" />
     </div>
 
     <div class="field">

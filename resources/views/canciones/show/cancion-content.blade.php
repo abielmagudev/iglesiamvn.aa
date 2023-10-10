@@ -35,6 +35,14 @@
 				</x-slot>
 
 				<p>
+					<small class="has-text-grey">Estatus</small>
+					<br>
+					<b class="is-capitalized">{{ $cancion->estatus }}</b>
+					<span>- {{ $cancion->descripcion_estatus }}</span>
+				</p>
+				<br>
+				
+				<p>
 					<small class="has-text-grey">Título y autor</small>
 					<br>
 					<b>{{ $cancion->titulo }}</b>
@@ -43,18 +51,10 @@
 				<br>
 
 				<p>
-					<small class="has-text-grey">Estatus</small>
-					<br>
-					<b class="is-capitalized">{{ $cancion->estatus }}</b>
-					<span>- {{ $cancion->estatus_descripcion }}</span>
-				</p>
-				<br>
-
-				<p>
 					<small class="has-text-grey">Indicador de tempo</small>
 					<br>
 					<b class="is-capitalized">{{ $cancion->indicador_tempo }}</b>
-					<span>- {{ $cancion->indicador_tempo_descripcion }}</span>
+					<span>- {{ $cancion->descripcion_indicador_tempo }}</span>
 				</p>
 				<br>
 

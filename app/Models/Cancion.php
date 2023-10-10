@@ -88,12 +88,12 @@ class Cancion extends Model
         $this->attributes['autor'] = Str::title( trim($value) );
     }
 
-    public function getIndicadorTempoDescripcionAttribute()
+    public function getDescripcionIndicadorTempoAttribute()
     {
         return self::getDescripcionIndicadorTempo($this->indicador_tempo);
     }
 
-    public function getEstatusDescripcionAttribute()
+    public function getDescripcionEstatusAttribute()
     {
         return self::getDescripcionEstatus($this->estatus);
     }
