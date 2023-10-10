@@ -32,7 +32,7 @@ class Etiqueta extends Model
     {
         return array_map(function ($etiqueta) {
 
-            return trim($etiqueta);
+            return strtolower( trim($etiqueta) );
             
         }, str_getcsv($etiquetas_csv));
     }
@@ -44,6 +44,14 @@ class Etiqueta extends Model
             self::convertirCsvArray($etiquetas_csv)
 
         );
+    }
+    
+
+    // Attributes
+    
+    public function setNombreAttribute($value)
+    {
+        $this->attributes['nombre'] => strtolower( trim($value) );
     }
 
 
