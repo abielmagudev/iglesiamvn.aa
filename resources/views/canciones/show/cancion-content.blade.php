@@ -71,7 +71,7 @@
 					<small class="has-text-grey">Etiquetas</small>
 					<br>
 					@foreach($cancion->etiquetas as $etiqueta)
-					<span class="tag is-light">{{ $etiqueta->nombre }}</span>
+					<a href="{{ route('canciones.index', ['etiquetas' => $etiqueta]) }}" class="tag is-light">{{ $etiqueta->nombre }}</a>
 					@endforeach
 				</p>
 				<br>
