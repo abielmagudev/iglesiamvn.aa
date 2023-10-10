@@ -45,13 +45,13 @@ class Etiqueta extends Model
 
         );
     }
-    
+
 
     // Attributes
     
     public function setNombreAttribute($value)
     {
-        $this->attributes['nombre'] => strtolower( trim($value) );
+        $this->attributes['nombre'] = strtolower( trim($value) );
     }
 
 
