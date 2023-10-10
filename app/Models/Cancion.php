@@ -36,6 +36,16 @@ class Cancion extends Model
         'repertorio' => 'Preparada y ensamblada para interpretar',
     ];
 
+    public static $plataformas_referencia = [
+        'youtube' => [
+            'youtube.com',
+            'youtu.be',
+            'y2u.be',
+        ],
+        'spotify' => [
+            'spotify.com',
+        ],
+    ];
 
 
     // Metodos estaticos Indicadores de Tempo
@@ -86,6 +96,20 @@ class Cancion extends Model
     public function setAutorAttribute($value)
     {
         $this->attributes['autor'] = Str::title( trim($value) );
+    }
+
+    public function getPlataformaUrlReferenciaAttribute()
+    {
+        foreach(self::$plataformas_referencia as $plataforma => $agujas)
+        {
+            foreach($agujas as $aguja)
+            {
+                if( stripos($this->url_referencia, $aguja) !== false )
+                    return $plataforma;
+            }
+        }
+
+        return 'plataforma desconocida';
     }
 
     public function getDescripcionIndicadorTempoAttribute()

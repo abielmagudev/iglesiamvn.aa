@@ -62,7 +62,7 @@
 					<small class="has-text-grey">URL de referencia</small>
 					<br>
 					@if( $cancion->tieneUrlReferencia() )
-					<a href="{{ $cancion->url_referencia }}" target="_blank">{{ $cancion->url_referencia }}</a>
+					<a href="{{ $cancion->url_referencia }}" target="_blank">Enlace en {{ $cancion->plataforma_url_referencia }}</a>
 					@endif
 				</p>
 				<br>
