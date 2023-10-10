@@ -37,13 +37,16 @@ class Cancion extends Model
     ];
 
     public static $plataformas_referencia = [
+        'google' => [
+            'google.com',
+        ],
+        'spotify' => [
+            'spotify.com',
+        ],
         'youtube' => [
             'youtube.com',
             'youtu.be',
             'y2u.be',
-        ],
-        'spotify' => [
-            'spotify.com',
         ],
     ];
 
