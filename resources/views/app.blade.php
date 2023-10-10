@@ -43,9 +43,10 @@
         @include('app.navbar')
 
         <section class="section">
-            @include('app.notificator')
             
             <div class="container">
+                
+                @include('app.notificator')
 
                 @yield('content')
                 

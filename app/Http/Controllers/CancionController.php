@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\CancionesExport;
 use App\Http\Requests\CancionSaveRequest;
+use App\Http\Requests\CancionExportRequest;
 use App\Models\Cancion;
 use App\Models\CancionCantante;
 use App\Models\Cantante;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CancionController extends Controller
 {
@@ -88,6 +91,13 @@ class CancionController extends Controller
         return redirect()->route('canciones.index')->with('success', "Canción <b>\"{$cancion->titulo}\"</b> eliminada");
     }
 
+    public function export(CancionExportRequest $request)
+    {
+        return Excel::download(
+            new CancionesExport($request),
+            sprintf('aa-canciones-%s.xlsx', now())
+        );
+    }
 
 
     // Metodos personalizados
